@@ -3,7 +3,7 @@
     "homepage": "https://github.com/liriliri/aya",
     "license": "MIT License",
     "url": "https://github.com/liriliri/aya/releases/download/v1.12.2/aya-v1.12.2-windows-x64.zip",
-    "hash": "TODO: obtain the SHA256 hash of the aya-v1.12.2-windows-x64.zip file",
+    "hash": "de9280cb64fcce272a43131989eeb7dca2e699c11ff2bd14f97d2f9970908e6b",
     "shortcuts": [
         [
             "aya.exe",
