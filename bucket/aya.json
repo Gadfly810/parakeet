@@ -1,7 +1,7 @@
 {
     "version": "1.12.2",
     "homepage": "https://github.com/liriliri/aya",
-    "license": "AGPL-3.0 license",
+    "license": "AGPL-3.0",
     "url": "https://github.com/liriliri/aya/releases/download/v1.12.2/aya-v1.12.2-windows-x64.zip",
     "hash": "de9280cb64fcce272a43131989eeb7dca2e699c11ff2bd14f97d2f9970908e6b",
     "shortcuts": [
