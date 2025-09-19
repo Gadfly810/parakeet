@@ -10,10 +10,7 @@
             "aya"
         ]
     ],
-    "checkver": {
-        "github": "liriliri/aya",
-        "regex": "v(?<version>[\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/liriliri/aya/releases/download/v$version/aya-v$version-windows-x64.zip"
     }
