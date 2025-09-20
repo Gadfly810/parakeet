@@ -12,6 +12,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/liriliri/aya/releases/download/v$version/aya-v$version-windows-x64.zip"
+        "url": "https://github.com/liriliri/aya/releases/download/v$version/AYA-$version-win-x64.exe"
     }
 }
