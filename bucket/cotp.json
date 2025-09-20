@@ -1,15 +1,14 @@
-{
-    "version": "1.9.7",
+{    "version": "1.9.7",
     "description": "command line TOTP/HOTP authenticator",
     "homepage": "https://github.com/replydev/cotp",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/replydev/cotp/releases/download/v1.9.7/cotp-1.9.7-x86_64-win-msvc.zip",
-            "hash": "12456c015f4d6989d3c7c4fe390405a4f48c684784cd5111354bcdac8298c086",
-            "extract_dir": "cotp-$version-x86_64-win-msvc"
-        }
+            "hash": "12456c015f4d6989d3c7c4fe390405a4f48c684784cd5111354bcdac8298c086"
+            }
     },
+    "extract_dir": "cotp-1.9.7-x86_64-win-msvc",
     "bin": "ctop.exe",
         "checkver": {
         "github": "https://github.com/replydev/cotp"
@@ -17,7 +16,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/replydev/cotp/releases/download/v$version/cotp-$version-x86_64-win-msvc.zip"
+                "url": "https://github.com/replydev/cotp/releases/download/v$version/cotp-$version-x86_64-win-msvc.zip",
+                "extract_dir": "cotp-$version-x86_64-win-msvc"
             }
         }
     }
