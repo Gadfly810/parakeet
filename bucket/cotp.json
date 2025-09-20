@@ -1,6 +1,6 @@
 {
     "version": "1.9.7",
-    "description": "command line TOTP/HOTP authenticator", 
+    "description": "command line TOTP/HOTP authenticator",
     "homepage": "https://github.com/replydev/cotp",
     "license": "AGPL-3.0",
     "url": "https://github.com/replydev/cotp/releases/download/v1.9.7/cotp-1.9.7-x86_64-win-msvc.zip",
