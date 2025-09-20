@@ -18,8 +18,9 @@
             "64bit": {
                 "url": "https://github.com/replydev/cotp/releases/download/v$version/cotp-$version-x86_64-win-msvc.zip"
             }
-        }
+        },
         "extract_dir": "cotp-$version-x86_64-win-msvc"
     }
 }
+
 
