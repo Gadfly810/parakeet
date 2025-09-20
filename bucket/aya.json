@@ -2,7 +2,7 @@
     "version": "1.12.2",
     "homepage": "https://github.com/liriliri/aya",
     "license": "AGPL-3.0",
-    "url": "https://github.com/liriliri/aya/releases/download/v$version/AYA-$version-win-x64.exe",
+    "url": "https://github.com/liriliri/aya/releases/download/v$version/AYA-$version-win-x64.exe#/dl.7z",
     "hash": "de9280cb64fcce272a43131989eeb7dca2e699c11ff2bd14f97d2f9970908e6b",
     "shortcuts": [
         [
@@ -12,6 +12,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/liriliri/aya/releases/download/v$version/AYA-$version-win-x64.exe"
+        "url": "https://github.com/liriliri/aya/releases/download/v$version/AYA-$version-win-x64.exe#/dl.7z"
     }
 }
