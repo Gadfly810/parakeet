@@ -2,7 +2,6 @@
     "version": "20250809",
     "description": "A fully packaged, easy-to-use version of the mpv with a complete solution (Lazy Bag)",
     "homepage": "https://github.com/hooke007/mpv_PlayKit",
-    "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20250809/mpv-lazy-20250809.exe#/dl.7z",
@@ -10,6 +9,28 @@
             "extract_dir": "mpv-lazy"
         }
     },
+    "installer": {
+        "script": [
+            "if (Test-Path \"$dir\\installer\\mpv-install.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-install.bat`\"\" -Verb RunAs -Wait",
+            "} else {",
+            "    Write-Warning 'mpv-install.bat not found, skipping installation'",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\installer\\mpv-uninstall.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-uninstall.bat`\"\" -Verb RunAs -Wait",
+            "}"
+        ]
+    },
+    "pre_install": [
+        "# 在更新前先运行卸载脚本",
+        "if (($oldVersion) -and (Test-Path \"$dir\\installer\\mpv-uninstall.bat\")) {",
+        "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-uninstall.bat`\"\" -Verb RunAs -Wait",
+        "}"
+    ],
     "notes": "Although the portable_config folder is retained by default, it is recommended to manually compare the configuration files in the old `portable_config` and new `portable_config.original` folders to track the latest changes. It is suggested to use WinMerge to compare the differences between the two folders.",
     "persist": "portable_config",
     "bin": [
