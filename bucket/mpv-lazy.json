@@ -2,9 +2,13 @@
     "version": "20250809",
     "description": "A fully packaged, easy-to-use version of the mpv with a complete solution (Lazy Bag)",
     "homepage": "https://github.com/hooke007/mpv_PlayKit",
+    "depends": [
+        "mpv",
+        "yt-dlp"
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20250809/mpv-lazy-20250809.exe#/dl.7z",
+            "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20250809/mpv-lazy-20250809-noBin.exe#/dl.7z",
             "hash": "aae41c9ac863f26a3038195ef1b6d89b83b58f41793e50730ddaf71629d2bcbf",
             "extract_dir": "mpv-lazy"
         }
@@ -26,9 +30,18 @@
         ]
     },
     "pre_install": [
-        "# 在更新前先运行卸载脚本",
-        "if (($oldVersion) -and (Test-Path \"$dir\\installer\\mpv-uninstall.bat\")) {",
-        "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-uninstall.bat`\"\" -Verb RunAs -Wait",
+        "# 创建项目根目录的符号链接到 Scoop 安装的 mpv 和 yt-dlp",
+        "$mpv_dir = (scoop which mpv).directory.parent",
+        "$yt_dlp_dir = (scoop which yt-dlp).directory.parent",
+        "",
+        "# 创建 mpv 的符号链接",
+        "if (Test-Path \"$mpv_dir\\mpv.exe\") {",
+        "    New-Item -ItemType SymbolicLink -Path \"$dir\\mpv.exe\" -Target \"$mpv_dir\\mpv.exe\" -Force | Out-Null",
+        "}",
+        "",
+        "# 创建 yt-dlp 的符号链接",
+        "if (Test-Path \"$yt_dlp_dir\\yt-dlp.exe\") {",
+        "    New-Item -ItemType SymbolicLink -Path \"$dir\\yt-dlp.exe\" -Target \"$yt_dlp_dir\\yt-dlp.exe\" -Force | Out-Null",
         "}"
     ],
     "notes": "Although the portable_config folder is retained by default, it is recommended to manually compare the configuration files in the old `portable_config` and new `portable_config.original` folders to track the latest changes. It is suggested to use WinMerge to compare the differences between the two folders.",
@@ -49,7 +62,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/$version/mpv-lazy-$version.exe#/dl.7z"
+                "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/$version/mpv-lazy-$version-noBin.exe#/dl.7z"
             }
         }
     }
