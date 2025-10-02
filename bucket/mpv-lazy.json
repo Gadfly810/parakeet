@@ -21,6 +21,19 @@
             "} else {",
             "    Write-Warning 'mpv-install.bat not found, skipping installation'",
             "}"
+            "# 创建项目根目录的符号链接到 Scoop 安装的 mpv 和 yt-dlp",
+            "$mpv_dir = (scoop which mpv).directory.parent",
+            "$yt_dlp_dir = (scoop which yt-dlp).directory.parent",
+            "",
+            "# 创建 mpv 的符号链接",
+            "if (Test-Path \"$mpv_dir\\mpv.exe\") {",
+            "    New-Item -ItemType SymbolicLink -Path \"$dir\\mpv.exe\" -Target \"$mpv_dir\\mpv.exe\" -Force | Out-Null",
+            "}",
+            "",
+            "# 创建 yt-dlp 的符号链接",
+            "if (Test-Path \"$yt_dlp_dir\\yt-dlp.exe\") {",
+            "    New-Item -ItemType SymbolicLink -Path \"$dir\\yt-dlp.exe\" -Target \"$yt_dlp_dir\\yt-dlp.exe\" -Force | Out-Null",
+            "}"
         ]
     },
     "uninstaller": {
@@ -30,21 +43,6 @@
             "}"
         ]
     },
-    "pre_install": [
-        "# 创建项目根目录的符号链接到 Scoop 安装的 mpv 和 yt-dlp",
-        "$mpv_dir = (scoop which mpv).directory.parent",
-        "$yt_dlp_dir = (scoop which yt-dlp).directory.parent",
-        "",
-        "# 创建 mpv 的符号链接",
-        "if (Test-Path \"$mpv_dir\\mpv.exe\") {",
-        "    New-Item -ItemType SymbolicLink -Path \"$dir\\mpv.exe\" -Target \"$mpv_dir\\mpv.exe\" -Force | Out-Null",
-        "}",
-        "",
-        "# 创建 yt-dlp 的符号链接",
-        "if (Test-Path \"$yt_dlp_dir\\yt-dlp.exe\") {",
-        "    New-Item -ItemType SymbolicLink -Path \"$dir\\yt-dlp.exe\" -Target \"$yt_dlp_dir\\yt-dlp.exe\" -Force | Out-Null",
-        "}"
-    ],
     "notes": "Although the portable_config folder is retained by default, it is recommended to manually compare the configuration files in the old `portable_config` and new `portable_config.original` folders to track the latest changes. It is suggested to use WinMerge to compare the differences between the two folders.",
     "persist": "portable_config",
     "bin": [
