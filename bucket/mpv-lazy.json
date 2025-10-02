@@ -9,7 +9,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20250809/mpv-lazy-20250809-noBin.exe#/dl.7z",
+            "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20250809/mpv-lazy-20250809-noBin.7z",
             "hash": "aae41c9ac863f26a3038195ef1b6d89b83b58f41793e50730ddaf71629d2bcbf",
             "extract_dir": "mpv-lazy"
         }
@@ -63,7 +63,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/$version/mpv-lazy-$version-noBin.exe#/dl.7z"
+                "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/$version/mpv-lazy-$version-noBin.7z"
             }
         }
     }
