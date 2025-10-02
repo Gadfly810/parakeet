@@ -16,11 +16,6 @@
     },
     "installer": {
         "script": [
-            "if (Test-Path \"$dir\\installer\\mpv-install.bat\") {",
-            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-install.bat`\"\" -Verb RunAs -Wait",
-            "} else {",
-            "    Write-Warning 'mpv-install.bat not found, skipping installation'",
-            "}"
             "# 创建项目根目录的符号链接到 Scoop 安装的 mpv 和 yt-dlp",
             "$mpv_dir = (scoop which mpv).directory.parent",
             "$yt_dlp_dir = (scoop which yt-dlp).directory.parent",
@@ -33,6 +28,11 @@
             "# 创建 yt-dlp 的符号链接",
             "if (Test-Path \"$yt_dlp_dir\\yt-dlp.exe\") {",
             "    New-Item -ItemType SymbolicLink -Path \"$dir\\yt-dlp.exe\" -Target \"$yt_dlp_dir\\yt-dlp.exe\" -Force | Out-Null",
+            "}",
+            "if (Test-Path \"$dir\\installer\\mpv-install.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-install.bat`\"\" -Verb RunAs -Wait",
+            "} else {",
+            "    Write-Warning 'mpv-install.bat not found, skipping installation'",
             "}"
         ]
     },
