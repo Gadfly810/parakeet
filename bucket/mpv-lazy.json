@@ -2,7 +2,7 @@
     "version": "20250809",
     "description": "A fully packaged, easy-to-use version of the mpv with a complete solution (Lazy Bag)",
     "homepage": "https://github.com/hooke007/mpv_PlayKit",
-    “license”: "GPL-2.0 license"
+    “license”: "GPL-2.0 license",
     "depends": [
         "mpv",
         "yt-dlp"
