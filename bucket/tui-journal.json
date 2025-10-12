@@ -1,0 +1,22 @@
+{    "version": "0.16.1",
+    "description": "A terminal-based application",
+    "homepage": "https://github.com/AmmarAbouZor/tui-journal",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AmmarAbouZor/tui-journal/releases/download/v0.16.1/tjournal-win.zip",
+            "hash": "12456c015f4d6989d3c7c4fe390405a4f48c684784cd5111354bcdac8298c086"
+            }
+    },
+    "bin": "tjournal.exe",
+        "checkver": {
+        "github": "https://github.com/AmmarAbouZor/tui-journal"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AmmarAbouZor/tui-journal/releases/download/v$version/tjournal-win.zip"，
+            }
+        }
+    }
+}
