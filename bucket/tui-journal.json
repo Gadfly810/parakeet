@@ -15,7 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AmmarAbouZor/tui-journal/releases/download/v$version/tjournal-win.zip"，
+                "url": "https://github.com/AmmarAbouZor/tui-journal/releases/download/v$version/tjournal-win.zip"
             }
         }
     }
