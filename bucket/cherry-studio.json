@@ -1,68 +1,34 @@
 {
-    "version": "1.6.4",
-    "description": "🍒 Cherry Studio is a desktop client that supports for multiple LLM providers",
-    "homepage": "https://cherry-ai.com/",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/CherryHQ/cherry-studio/raw/refs/heads/main/LICENSE"
-    },
+    "version": "0.2.0",
+    "description": "A cross-platform private music playback service ",
+    "homepage": "https://github.com/any-listen",
+    "license": "AGPL v3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.4/Cherry-Studio-1.6.4-x64-setup.exe#/dl.7z",
-            "hash": "sha512:16baa0a5afed86959609de970dabf6387a3354e78fb3a42d5075bc085087c2ea9de8f76ebcf66c6f253b6bdce0a6280a7bf88acb0fa0da5bba06cb9d6895df8f",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Unintall*\" -Recurse"
-            ]
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.2.0/any-listen-0.2.0-win_x64-green.7z",
+            "hash": "08217198ef67c7e04a803789d0cd7a116d49b619a9355b182012674d88457a9e",
         },
         "arm64": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.6.4/Cherry-Studio-1.6.4-arm64-setup.exe#/dl.7z",
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.2.0/any-listen-0.2.0-win_arm64-green.7z",
             "hash": "08217198ef67c7e04a803789d0cd7a116d49b619a9355b182012674d88457a9e",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Unintall*\" -Recurse"
-            ]
         }
     },
-    "post_install": [
-        "$appDataPath = \"$env:APPDATA\\CherryStudio\"",
-        "$persistPath = \"$persist_dir\\CherryStudio\"",
-        "if (Test-Path $appDataPath) {",
-        "    Remove-Item $appDataPath -Recurse -Force",
-        "}",
-        "if (-Not (Test-Path $persistPath)) {",
-        "    New-Item -Path \"$persistPath\" -ItemType Directory | Out-Null",
-        "}",
-        "New-Item -ItemType Junction -Path \"$appDataPath\" -Target \"$persistPath\" | Out-Null"
-    ],
-    "notes": "You'd better turn off update detection in Settings->About Us in Cherry Studio and use scoop to manage updates, otherwise it will cause some errors.",
     "shortcuts": [
         [
-            "Cherry Studio.exe",
-            "Cherry Studio"
+            "Any Listen.exe",
+            "Any Listen"
         ]
     ],
-    "uninstaller": {
-        "script": [
-            "if (Test-Path \"$env:LOCALAPPDATA\\cherrystudio-updater\" -PathType Container) {",
-            "    Remove-Item -Recurse -Force \"$env:LOCALAPPDATA\\cherrystudio-updater\"",
-            "}"
-        ]
-    },
     "checkver": {
-        "github": "https://github.com/CherryHQ/cherry-studio"
+        "github": "https://github.com/any-listen/any-listen-desktop"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512: $base64"
-                }
+                "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v$version/any-listen-$version-win_x64-green.7z"
             },
             "arm64": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe#/dl.7z"
+                "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v$version/any-listen-$version-win_arm64-green.7z"
             }
         }
     }
