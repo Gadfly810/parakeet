@@ -1,5 +1,5 @@
 {
-    "version": "20250809",
+    "version": "20251026",
     "description": "A fully packaged, easy-to-use version of the mpv with a complete solution (Lazy Bag)",
     "homepage": "https://github.com/hooke007/mpv_PlayKit",
     "license": "GPL-2.0 license",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20250809/mpv-lazy-20250809-noBin.7z",
-            "hash": "aae41c9ac863f26a3038195ef1b6d89b83b58f41793e50730ddaf71629d2bcbf",
+            "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20251026/mpv-lazy-20251026-noBin.7z",
+            "hash": "57dd13942e12e34ba498e2f145e2272d1652edb4216913b133b22d8382d74370",
             "extract_dir": "mpv-lazy"
         }
     },
