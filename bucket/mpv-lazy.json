@@ -23,6 +23,7 @@
             "# 创建 mpv 的硬链接",
             "if (Test-Path $mpv_dir) {",
             "    New-Item -ItemType HardLink -Path \"$dir\\mpv.exe\" -Target $mpv_dir -Force | Out-Null",
+            "    New-Item -ItemType HardLink -Path \"$dir\\mpv.com\" -Target $mpv_dir -Force | Out-Null",
             "}",
             "",
             "# 创建 yt-dlp 的符号链接",
@@ -30,17 +31,25 @@
             "    New-Item -ItemType SymbolicLink -Path \"$dir\\yt-dlp.exe\" -Target $yt_dlp_dir -Force | Out-Null",
             "}",
             "",
-            "if (Test-Path \"$dir\\installer\\mpv-install.bat\") {",
-            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-install.bat`\"\" -Verb RunAs -Wait",
+            "if (Test-Path \"$dir\\installer\\mpv-register.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-register.bat`\"\" -Verb RunAs -Wait",
             "} else {",
-            "    Write-Warning 'mpv-install.bat not found, skipping installation'",
+            "    Write-Warning 'mpv-register.bat not found, skipping installation'",
+            "}",
+            "if (Test-Path \"$dir\\installer\\umpv-install.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\umpv-install.bat`\"\" -Verb RunAs -Wait",
+            "} else {",
+            "    Write-Warning 'umpv-install.bat not found, skipping installation'",
             "}"
         ]
     },
     "uninstaller": {
         "script": [
-            "if (Test-Path \"$dir\\installer\\mpv-uninstall.bat\") {",
-            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-uninstall.bat`\"\" -Verb RunAs -Wait",
+            "if (Test-Path \"$dir\\installer\\mpv-unregister.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-unregister.bat`\"\" -Verb RunAs -Wait",
+            "}",
+            "if (Test-Path \"$dir\\installer\\umpv-uninstall.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\umpv-uninstall.bat`\"\" -Verb RunAs -Wait",
             "}"
         ]
     },
