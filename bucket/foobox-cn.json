@@ -11,8 +11,6 @@
             "Foobox"
         ]
     ],
-    "pre_install": "if (!(Test-Path \"$persist_dir\\profile\")) { Rename-Item -Path \"$dir\\`$_13_\" -NewName 'profile' }",
-    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse",
     "persist": "profile",
     "checkver": {
         "url": "https://api.github.com/repos/dream7180/foobox-cn/releases/latest",
