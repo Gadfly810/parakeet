@@ -1,12 +1,12 @@
 {
-    "version": "0.7.5",
+    "version": "0.7.6",
     "description": "A cross-platform Markdown editor and preview tool with rapid response, instant rendering, and S3/R2 image host support.",
     "homepage": "https://github.com/flyhunterl/flymd",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/flyhunterl/flymd/releases/download/v0.7.5/flymd_portable_x64.zip",
-            "hash": "1590fb20d6dda5a31227e68b54ff9abc2b50ce46fd8511ffd6cb2533aed8b133"
+            "url": "https://github.com/flyhunterl/flymd/releases/download/v0.7.6/flymd_portable_x64.zip",
+            "hash": "9ea0a30f7c13e481cb7880e0d8d96701106ac09b711b24c0ae0593d8c5813a37"
         }
     },
     "shortcuts": [
