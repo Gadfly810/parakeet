@@ -1,5 +1,5 @@
 {
-    "version": "v1.3.9",
+    "version": "1.3.9",
     "description": "A Modern, Cross-Platform Desktop RSS Reader",
     "homepage": "https://mrrss.ch3nyang.top/",
     "license": {
@@ -23,16 +23,14 @@
         ]
     ],
     "persist": "data",
-    "checkver": {
-        "github": "https://github.com/WCY-dt/MrRSS/releases/",
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/WCY-dt/MrRSS/releases/download/$version/MrRSS-$version-windows-amd64-portable.zip"
+                "url": "https://github.com/WCY-dt/MrRSS/releases/download/v$version/MrRSS-$version-windows-amd64-portable.zip"
             },
             "arm64": {
-                "url": "https://github.com/WCY-dt/MrRSS/releases/download/$version/MrRSS-$version-windows-arm64-portable.zip"
+                "url": "https://github.com/WCY-dt/MrRSS/releases/download/v$version/MrRSS-$version-windows-arm64-portable.zip"
             }
         }
     }
