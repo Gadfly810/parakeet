@@ -1,0 +1,35 @@
+{
+    "version": "0.6.9",
+    "description": "Blazing fast TUI download manager built in Go for power users",
+    "homepage": "https://github.com/surge-downloader/surge",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/surge-downloader/surge/releases/download/v0.6.9/Surge_0.6.9_windows_amd64.zip",
+            "hash": "替换为_amd64.zip_的SHA256值"
+        },
+        "32bit": {
+            "url": "https://github.com/surge-downloader/surge/releases/download/v0.6.9/Surge_0.6.9_windows_386.zip",
+            "hash": "替换为_386.zip_的SHA256值"
+        },
+        "arm64": {
+            "url": "https://github.com/surge-downloader/surge/releases/download/v0.6.9/Surge_0.6.9_windows_arm64.zip",
+            "hash": "替换为_arm64.zip_的SHA256值"
+        }
+    },
+    "bin": "surge.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/surge-downloader/surge/releases/download/v$version/Surge_$version_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/surge-downloader/surge/releases/download/v$version/Surge_$version_windows_386.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/surge-downloader/surge/releases/download/v$version/Surge_$version_windows_arm64.zip"
+            }
+        }
+    }
+}

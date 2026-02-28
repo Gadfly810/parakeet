@@ -1,0 +1,59 @@
+{
+    "version": "20251026",
+    "description": "A fully packaged, easy-to-use version of the mpv with a complete solution (Lazy Bag)",
+    "homepage": "https://github.com/hooke007/mpv_PlayKit",
+    "license": "GPL-2.0 license",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/20251026/mpv-lazy-20251026-noBin.7z",
+            "hash": "57dd13942e12e34ba498e2f145e2272d1652edb4216913b133b22d8382d74370",
+            "extract_dir": "mpv-lazy"
+        }
+    },
+    "installer": {
+        "script": [
+            "if (Test-Path \"$dir\\installer\\mpv-register.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-register.bat`\"\" -Verb RunAs -Wait",
+            "} else {",
+            "    Write-Warning 'mpv-register.bat not found, skipping installation'",
+            "}",
+            "if (Test-Path \"$dir\\installer\\umpv-install.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\umpv-install.bat`\"\" -Verb RunAs -Wait",
+            "} else {",
+            "    Write-Warning 'umpv-install.bat not found, skipping installation'",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\installer\\mpv-unregister.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\mpv-unregister.bat`\"\" -Verb RunAs -Wait",
+            "}",
+            "if (Test-Path \"$dir\\installer\\umpv-uninstall.bat\") {",
+            "    Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c `\"$dir\\installer\\umpv-uninstall.bat`\"\" -Verb RunAs -Wait",
+            "}"
+        ]
+    },
+    "notes": "Although the portable_config folder is retained by default, it is recommended to manually compare the configuration files in the old `portable_config` and new `portable_config.original` folders to track the latest changes. It is suggested to use WinMerge to compare the differences between the two folders.",
+    "persist": "portable_config",
+    "bin": [
+        [
+            "mpv.exe",
+            "mpv"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "mpv.exe",
+            "mpv"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hooke007/mpv_PlayKit/releases/download/$version/mpv-lazy-$version-noBin.7z"
+            }
+        }
+    }
+}
