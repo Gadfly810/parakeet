@@ -6,15 +6,15 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/surge-downloader/surge/releases/download/v0.6.9/Surge_0.6.9_windows_amd64.zip",
-            "hash": "替换为_amd64.zip_的SHA256值"
+            "hash": "8d43720d8895d9a7a2b847675a714a4d272905f977aa51ea149889d613917ad7"
         },
         "32bit": {
             "url": "https://github.com/surge-downloader/surge/releases/download/v0.6.9/Surge_0.6.9_windows_386.zip",
-            "hash": "替换为_386.zip_的SHA256值"
+            "hash": "8d43720d8895d9a7a2b847675a714a4d272905f977aa51ea149889d613917ad7"
         },
         "arm64": {
             "url": "https://github.com/surge-downloader/surge/releases/download/v0.6.9/Surge_0.6.9_windows_arm64.zip",
-            "hash": "替换为_arm64.zip_的SHA256值"
+            "hash": "8d43720d8895d9a7a2b847675a714a4d272905f977aa51ea149889d613917ad7"
         }
     },
     "bin": "surge.exe",
