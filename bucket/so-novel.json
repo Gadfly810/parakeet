@@ -16,6 +16,10 @@
             "SoNovel"
         ]
     ],
+    "persist":[
+        "config.ini",
+        "sonovel.l4j.ini"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
