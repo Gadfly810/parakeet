@@ -1,12 +1,12 @@
 {
-    "version": "0.57.1",
+    "version": "0.60.0",
     "description": "AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries.",
     "homepage": "https://github.com/badlogic/pi-mono",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/badlogic/pi-mono/releases/download/v0.57.1/pi-windows-x64.zip",
-            "hash": "48c6de6ce201b7fa483934b05ffbabec9663fb180aa80a793e2fd57048fa3789"
+            "url": "https://github.com/badlogic/pi-mono/releases/download/v0.60.0/pi-windows-x64.zip",
+            "hash": "dd287901a857cb296a8ea6c8a34b7861de66dcdff8f56b92867f59816a0d6805"
         }
     },
     "bin": "pi.exe",
