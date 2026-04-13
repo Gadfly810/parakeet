@@ -9,7 +9,7 @@
             "hash": "eb4cf3eb76fddf3ab4dd04493077b209d9b3a49b2be1167eb560e0883fc0958e"
         }
     },
-    "extract_dir": "cotp-$version-x86_64-win-msvc",
+    "extract_dir": "cotp-1.9.9-x86_64-win-msvc",
     "bin": "cotp.exe",
     "checkver": {
         "github": "https://github.com/replydev/cotp"
