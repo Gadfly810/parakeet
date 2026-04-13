@@ -44,7 +44,7 @@
     "persist": [
         "shell.log",
         "shell.nss",
-        "import"
+        "imports"
     ],
     "checkver": {
         "url": "https://nilesoft.org/download/changes",
