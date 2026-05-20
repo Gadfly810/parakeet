@@ -9,12 +9,7 @@
       "hash": "a6443171f0ecd5efac5c16771f981f346e6f2f8033b2fdbdaecfac24c474bdd5"
     }
   },
-  "shortcuts": [
-    [
-      "ghgrab-win32.exe",
-      "ghgrab"
-    ]
-  ],
+  "bin": [ [ "ghgrab-win32.exe", "ghgrab"] ],
   "checkver": "github",
   "autoupdate": {
     "architecture": {
