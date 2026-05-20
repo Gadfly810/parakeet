@@ -1,21 +1,26 @@
 {
-  "version": "v1.3.2",
-  "description": "A simple, pretty terminal tool that lets you search and download files from GitHub without leaving your CLI.",
-  "homepage": "https://github.com/abhixdd/ghgrab",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/abhixdd/ghgrab/releases/download/v1.3.2/ghgrab-win32.exe",
-      "hash": "a6443171f0ecd5efac5c16771f981f346e6f2f8033b2fdbdaecfac24c474bdd5"
-    }
-  },
-  "bin": [ [ "ghgrab-win32.exe", "ghgrab"] ],
-  "checkver": "github",
-  "autoupdate": {
+    "version": "1.3.2",
+    "description": "A simple, pretty terminal tool that lets you search and download files from GitHub without leaving your CLI.",
+    "homepage": "https://github.com/abhixdd/ghgrab",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/abhixdd/ghgrab/releases/download/v$version/ghgrab-win32.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/abhixdd/ghgrab/releases/download/v1.3.2/ghgrab-win32.exe",
+            "hash": "a6443171f0ecd5efac5c16771f981f346e6f2f8033b2fdbdaecfac24c474bdd5"
+        }
+    },
+    "bin": [
+        [
+            "ghgrab-win32.exe",
+            "ghgrab"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/abhixdd/ghgrab/releases/download/v$version/ghgrab-win32.exe"
+            }
+        }
     }
-  }
 }
