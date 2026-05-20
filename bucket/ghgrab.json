@@ -1,12 +1,12 @@
 {
-    "version": "1.3.2",
+    "version": "2.0.1",
     "description": "A simple, pretty terminal tool that lets you search and download files from GitHub without leaving your CLI.",
     "homepage": "https://github.com/abhixdd/ghgrab",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/abhixdd/ghgrab/releases/download/v1.3.2/ghgrab-win32.exe",
-            "hash": "a6443171f0ecd5efac5c16771f981f346e6f2f8033b2fdbdaecfac24c474bdd5"
+            "url": "https://github.com/abhixdd/ghgrab/releases/download/v2.0.1/ghgrab-win32.exe",
+            "hash": "ec6f251a69717caffdf0a25dd0eb48b538b03e24cd462d57ad3b8c7e3c193874"
         }
     },
     "bin": [
