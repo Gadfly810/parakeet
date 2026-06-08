@@ -13,7 +13,7 @@
     "installer": {
         "script": [
             "try {",
-            "    $mpv_root = & scoop prefix mpv 2>$null",
+            "    $mpv_root = & scoop prefix mpv-git 2>$null",
             "    if ($mpv_root) {",
             "        $mpv_exe = Join-Path $mpv_root 'mpv.exe'",
             "        if (Test-Path $mpv_exe) {",
