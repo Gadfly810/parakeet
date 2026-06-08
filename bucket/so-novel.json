@@ -1,12 +1,12 @@
 {
-    "version": "1.10.2",
+    "version": "1.10.3",
     "description": "So Novel 是一款通用的网页内容处理与导出工具，它致力于帮助用户高效地从网页中提取结构化信息，并将其灵活导出为 EPUB、TXT、PDF 等多种标准电子文档格式。适用于学习采集、格式转换、电子书制作等场景。",
     "homepage": "https://github.com/freeok/so-novel",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/freeok/so-novel/releases/download/v1.10.2/sonovel-windows.tar.gz",
-            "hash": "f314574ef1e9418d8afe83145020e70c31a7faaf3d6e96ece6ed4553182ea11e"
+            "url": "https://github.com/freeok/so-novel/releases/download/v1.10.3/sonovel-windows.tar.gz",
+            "hash": "1999db441719b592e270baeb5dbe5c7424823cf78e254ea7b43da0cefdb60e04"
         }
     },
     "extract_dir": "SoNovel",
