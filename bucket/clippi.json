@@ -9,6 +9,14 @@
             "hash": "0689c6ecea78208d083f109c5e58b3db095c58baff1b56acd414c4526b018fa8"
         }
     },
+    "pre_install": [
+        "if (Test-Path \"$persist_dir\\clippi.db\") { Copy-Item \"$persist_dir\\clippi.db\" \"$dir\\clippi.db\" -Force }",
+        "if (Test-Path \"$persist_dir\\clippi.toml\") { Copy-Item \"$persist_dir\\clippi.toml\" \"$dir\\clippi.toml\" -Force }"
+    ],
+    "post_install": [
+        "if (Test-Path \"$dir\\clippi.db\") { Copy-Item \"$dir\\clippi.db\" \"$persist_dir\\clippi.db\" -Force }",
+        "if (Test-Path \"$dir\\clippi.toml\") { Copy-Item \"$dir\\clippi.toml\" \"$persist_dir\\clippi.toml\" -Force }"
+    ],
     "bin": "clippi.exe",
     "shortcuts": [
         [
@@ -16,11 +24,13 @@
             "Clippi"
         ]
     ],
-    "persist": [
-        "clippi.db",
-        "clippi.toml",
-        "images"
-    ],
+    "persist": "images",
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\clippi.db\") { Copy-Item \"$dir\\clippi.db\" \"$persist_dir\\clippi.db\" -Force }",
+            "if (Test-Path \"$dir\\clippi.toml\") { Copy-Item \"$dir\\clippi.toml\" \"$persist_dir\\clippi.toml\" -Force }"
+        ]
+    },
     "checkver": {
         "github": "https://github.com/Ruszero01/clippi"
     },
