@@ -1,16 +1,16 @@
 {
-    "version": "0.7.0",
+    "version": "0.7.1",
     "description": "A cross-platform private music playback service ",
     "homepage": "https://github.com/any-listen",
     "license": "AGPL v3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.7.0/any-listen-0.7.0-win_x64-green.7z",
-            "hash": "33613140a06cdf1b574c4d9c3c5e3e2b8f8bae15592b79fac7e8b71fbfb5ce8f"
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.7.1/any-listen-0.7.1-win_x64-green.7z",
+            "hash": "0b43f2842a9f1889fb2540cd384df2f192296183e4a8982194f9d9044b1bac25"
         },
         "arm64": {
-            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.7.0/any-listen-0.7.0-win_arm64-green.7z",
-            "hash": "a9c911b8ff528b48b41aa08f09fdcbe2e488b9ac4f3b752618d73a3d606dcb81"
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.7.1/any-listen-0.7.1-win_arm64-green.7z",
+            "hash": "338a4ba04ba57f7813a88d4c0770efe194a9d4e8b779624da23314969cbd30a7"
         }
     },
     "shortcuts": [
