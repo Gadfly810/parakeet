@@ -1,16 +1,16 @@
 {
-    "version": "0.5.41",
+    "version": "0.5.42",
     "description": "Open-source database client. 15MB, lightweight, cross-platform. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse, SQL Server and more.",
     "homepage": "https://github.com/t8y2/dbx",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.41/DBX_0.5.41_x64-portable.zip",
-            "hash": "77383c284d09d1673437c88191aadc3ea4ed0630b577d51df0e271cdec9f0567"
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.42/DBX_0.5.42_x64-portable.zip",
+            "hash": "e24c6616d30dc8482f4f04c20b3a92a1733e590844f00f5df8a58f1d1e322cde"
         },
         "arm64": {
-            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.41/DBX_0.5.41_arm64-portable.zip",
-            "hash": "c1fa9e3a97b130186098d3fa3cc1b50390e5daf027e0d0f4a1c982aff02e7c8c"
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.42/DBX_0.5.42_arm64-portable.zip",
+            "hash": "859f59127c8680ba7111cd6fb8520bc67f96045264b0548aad967ce7f0cf4743"
         }
     },
     "shortcuts": [
