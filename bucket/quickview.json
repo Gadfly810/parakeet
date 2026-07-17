@@ -13,6 +13,12 @@
             "hash": "d2929217ef889d97db8cf0057d0c1b1c90abf7610c2c80ba497cf8f79826135a"
         }
     },
+    "pre_install": [
+        "if (Test-Path \"$persist_dir\\QuickView.ini\") { Copy-Item \"$persist_dir\\QuickView.ini\" \"$dir\\QuickView.ini\" -Force }"
+    ],
+    "post_install": [
+        "if (Test-Path \"$dir\\QuickView.ini\") { Copy-Item \"$dir\\QuickView.ini\" \"$persist_dir\\QuickView.ini\" -Force }"
+    ],
     "bin": "QuickView.exe",
     "shortcuts": [
         [
@@ -20,7 +26,11 @@
             "QuickView"
         ]
     ],
-    "persist": "QuickView.ini",
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$dir\\QuickView.ini\") { Copy-Item \"$dir\\QuickView.ini\" \"$persist_dir\\QuickView.ini\" -Force }"
+        ]
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
