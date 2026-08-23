@@ -1,0 +1,31 @@
+{
+    "version": "2.5.0",
+    "description": "Easily download and manage single-player game cheats for your convenience. An open-source dashboard that brings trainers from Fling, XiaoXing, Cheat Engine tables and community uploads into one place, with instant English/Chinese search.",
+    "homepage": "https://github.com/dyang886/Game-Cheats-Manager",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Settings are stored in '%APPDATA%\\GCM Settings' and downloaded trainers default to '%APPDATA%\\GCM Trainers'.",
+        "Trainers modify game memory and may trigger false-positive antivirus alerts. Use the in-app Windows Defender helper to whitelist your trainer folders.",
+        "Disable 'Check app updates' in Settings to keep the built-in updater (Updater.exe) from conflicting with Scoop."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.5.0/Game.Cheats.Manager.Portable.2.5.0.zip",
+            "hash": "c3ae84cb38fe7e8876996e42c98063bf3cb3657a2820a6d43b6ae5a2310d7fb8"
+        }
+    },
+    "shortcuts": [
+        [
+            "Game Cheats Manager.exe",
+            "Game Cheats Manager"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v$version/Game.Cheats.Manager.Portable.$version.zip"
+            }
+        }
+    }
+}
