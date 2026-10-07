@@ -17,6 +17,10 @@
         [
             "aria2-next-*-windows-*.exe",
             "aria2-next"
+        ],
+        [
+            "aria2-next-*-windows-*.exe",
+            "aria2c"
         ]
     ],
     "checkver": "github",
