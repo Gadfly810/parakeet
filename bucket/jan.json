@@ -13,10 +13,13 @@
             "hash": "08aca371733b76200e44e95d677cdd15e96609f86f919de57b97a5358ca21e9b"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse -ErrorAction Ignore",
+    "post_install": [
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse -ErrorAction Ignore",
+        "Get-ChildItem \"$dir\" -Recurse -Include 'bun*.exe', 'uv*.exe' -File -ErrorAction Ignore | Remove-Item -Force -ErrorAction Ignore"
+    ],
     "shortcuts": [
         [
-            "Jan.exe",
+            "Jan-Desktop.exe",
             "Jan"
         ]
     ],
