@@ -1,0 +1,50 @@
+{
+    "version": "build-341",
+    "description": "Experimental open-source Nintendo Switch and Switch 2 emulator (Eglantine/Eden/yuzu fork)",
+    "homepage": "https://github.com/zortos293/Lichii",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/zortos293/Lichii/blob/master/LICENSE.txt"
+    },
+    "notes": [
+        "Lichii has no official website. Download it only from https://github.com/zortos293/Lichii/releases.",
+        "Games, keys and firmware are not included and must be dumped from hardware you own."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zortos293/Lichii/releases/download/build-341/lichii-windows-x86_64.zip",
+            "hash": "9ade0d5c9a84b440674fe330f6d9f9a4a0fa3577068d561c6a7f730e585b9b8f"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\user\")) {",
+        "    New-Item \"$persist_dir\\user\" -ItemType Directory | Out-Null",
+        "    if (Test-Path \"$env:APPDATA\\lichii\") {",
+        "        Write-Host \"Migrating AppData...\" -ForegroundColor Yellow",
+        "        Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        "lichii.exe",
+        "eden-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "lichii.exe",
+            "Lichii"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://github.com/zortos293/Lichii",
+        "regex": "tag/(build-\\d+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zortos293/Lichii/releases/download/$version/lichii-windows-x86_64.zip"
+            }
+        }
+    }
+}
