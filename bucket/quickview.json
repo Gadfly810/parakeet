@@ -13,8 +13,8 @@
             "hash": "1c91193bb2e5e3ef411784279756a0e1b47bcf0fd34a8a2a82c609c0fb2351f5"
         }
     },
-    "pre_install": "if (Test-Path \"$persist_dir\\QuickView.ini\") { Copy-Item \"$persist_dir\\QuickView.ini\" \"$dir\\QuickView.ini\" -Force }",
-    "post_install": "if (Test-Path \"$dir\\QuickView.ini\") { Copy-Item \"$dir\\QuickView.ini\" \"$persist_dir\\QuickView.ini\" -Force }",
+    "pre_install": "if (!(Test-Path \"$persist_dir\")) { New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null }; foreach ($f in 'QuickView.ini', 'ai_actions.json') { if (Test-Path \"$persist_dir\\$f\" -PathType Leaf) { Copy-Item \"$persist_dir\\$f\" \"$dir\\$f\" -Force } }",
+    "post_install": "if (!(Test-Path \"$persist_dir\")) { New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null }; foreach ($f in 'QuickView.ini', 'ai_actions.json') { if (Test-Path \"$dir\\$f\" -PathType Leaf) { Copy-Item \"$dir\\$f\" \"$persist_dir\\$f\" -Force } }",
     "bin": "QuickView.exe",
     "shortcuts": [
         [
@@ -23,7 +23,7 @@
         ]
     ],
     "uninstaller": {
-        "script": "if (Test-Path \"$dir\\QuickView.ini\") { Copy-Item \"$dir\\QuickView.ini\" \"$persist_dir\\QuickView.ini\" -Force }"
+        "script": "if (!(Test-Path \"$persist_dir\")) { New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null }; foreach ($f in 'QuickView.ini', 'ai_actions.json') { if (Test-Path \"$dir\\$f\" -PathType Leaf) { Copy-Item \"$dir\\$f\" \"$persist_dir\\$f\" -Force } }"
     },
     "checkver": "github",
     "autoupdate": {
