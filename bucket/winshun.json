@@ -1,5 +1,5 @@
 {
-    "version": "0.52.0",
+    "version": "0.53.0",
     "description": "Win顺 (WinShun): instant file, folder and content search, clipboard history and screenshot tools | 免费开源的 Windows 快速搜索启动器",
     "homepage": "https://github.com/LingCore/WinShun",
     "license": "MIT",
@@ -10,8 +10,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LingCore/WinShun/releases/download/v0.52.0/WinShun-0.52.0-x64-portable.zip",
-            "hash": "3d13e83f6209ea39f31275898a7a27583a682f10178d0ef767cde32ff8c6783f"
+            "url": "https://github.com/LingCore/WinShun/releases/download/v0.53.0/WinShun-0.53.0-x64-portable.zip",
+            "hash": "856060e3e29d8a69bd168a4143662535c3e197769f432596e7acfa0ad42a19b3"
         }
     },
     "extract_dir": "WinShun",
